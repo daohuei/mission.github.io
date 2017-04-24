@@ -78,11 +78,7 @@
  var geocoder = new google.maps.Geocoder();
   var str1 = "address1";
   var str2 = "address2";
-  document.getElementById('submit').addEventListener('click', function() {
-    geocodeAddress(geocoder, map, str1);
-	geocodeAddress(geocoder, map, str2);
-  });
-  
+
       layer = new google.maps.FusionTablesLayer({
 	  suppressInfoWindows	: true,
       map: map,
@@ -92,6 +88,7 @@
         from: "1ZXFW3iHC1CUHWBRPruO74EuE7yBRvMiAjOWJY1aU",
         where: ""
       },
+ 
       options: {
         styleId: 2,
         templateId: 2
@@ -130,14 +127,8 @@
    <!--Import jQuery before materialize.js-->
       <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
       <script type="text/javascript" src="js/materialize.min.js"></script>
-	    <nav>
-    <div class="nav-wrapper teal lighten-2"> 
-	    <a class="waves-effect waves-red teal lighten-2 small-btn" href="#" >Back</a>
-        <input id="address1" value="中興大學" type="textbox" size="8" class="teal lighten-4" style="color:#000000 ">
-        <input id="address2" value="鄉林凱撒" type="textbox" size="8" class="teal lighten-4" style="color:#000000 ">
-        <a class="waves-effect waves-red teal btn" id="submit" type="button" >GO!!!!</a>
-    </div>
-  </nav>
+	    
+  
 
 
         <div  id="map"></div>
@@ -146,11 +137,11 @@
           <div class="container">
             <div class="row">
               <div class="col l6 s12">
-                <h5 class="white-text">支線任務</h5>
+                <h5 class="white-text" id="fo2">支線任務</h5>
                 <p class="grey-text text-lighten-4" id="fo1">任務內容</p>
               </div>
               <div class="col l4 offset-l2 s12">
-                <h5 class="white-text" id="fo2">任務名稱</h5>
+                <h5 class="white-text" >任務資訊</h5>
                 <ul>
                   <li><a class="grey-text text-lighten-3" id="fo3">編號</a></li>
                   <li><a class="grey-text text-lighten-3" id="fo4">地址</a></li>
@@ -159,11 +150,11 @@
                 </ul>
               </div>
             </div>
-          </div>
-          <div class="footer-copyright">
-            <div class="container">
-            © 2014 Copyright Text
-            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            <div class="copyright">
+              <div class="col l6 s12">
+                <button class="waves-effect waves-light btn">接受任務</button>
+                <button class="waves-effect waves-light btn">取消任務</button>
+              </div>
             </div>
           </div>
         </footer>
